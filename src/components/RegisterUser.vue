@@ -30,8 +30,12 @@
         v-model="password"
         ></v-text-field>
         </v-col>
-        <button @click="persist">Save</button>
-        <button @click="send">Register</button>
+        <v-btn @click ="register" depressed
+  elevation="2"
+  large
+  outlined
+  raised
+  rounded>Register</v-btn>
     </v-row>
   </v-container>
 </template>
@@ -63,15 +67,15 @@
         }
     },
     methods: {
-        persist() {
+        register() {
             localStorage.firstName = this.firstName;
             localStorage.lastName = this.lastName;
             localStorage.email = this.email;
             localStorage.password = this.password;
             console.log("firstName: " + this.firstName, "lastName: " + this.lastName, "email :" + this.email, "password: " + this.password);
-        },
-        submit() {
-          var myObj = {
+
+// Creating a Javascript object to send data to swagger API
+            var myObj = {
             firstName:  localStorage.firstName, 
             lastName:  localStorage.lastName, 
             email:  localStorage.email, 
@@ -79,16 +83,8 @@
             };
           var myJSON = JSON.stringify(myObj);
           console.log(myJSON);
-        },
-    // POST request using fetch with set headers
-        send() {
-          var myObj = {
-            firstName:  localStorage.firstName, 
-            lastName:  localStorage.lastName, 
-            email:  localStorage.email, 
-            password:  localStorage.password
-            };
-    var myJSON = JSON.stringify(myObj);
+
+// POST request to send user information
     const sendToSwagger = {
       method: 'POST',
       headers: { 
@@ -107,12 +103,6 @@
         }).catch(function (error) {
           console.warn('Something went wrong', error);
         });
-      //  => response.json())
-      //.then(data => this.postId = data.id);
-      // const data = reponse.json()
-      // return this.response.json();
-      // console.log(data);
-      // console.log(({myJSON}))
   }
 }
 }

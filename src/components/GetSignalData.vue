@@ -1,11 +1,56 @@
 <template>
   <v-container>
     <v-row class="get-signal-data">
-        <button @click="getSignalData1">Get Alarm Signal Data</button>
+        <v-btn @click="getSignalData1" depressed
+  elevation="2"
+  large
+  outlined
+  raised
+  rounded>Get Alarm Signal Data</v-btn>
     </v-row>
+     <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr>
+          <th class="text-left">
+            Alarm Number
+          </th>
+          <th class="text-left">
+            Event Code Description
+          </th>
+          <th class="text-left">
+            Point Description
+          </th>
+          <th class="text-left">
+            Signal Code
+          </th>
+          <th class="text-left">
+            Xmit
+          </th>
+          <th class="text-left">
+            Site Date
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="items of signalData.items"
+          :key="items"
+        >
+          <td>{{ items.alarmNum }}</td>
+          <td>{{ items.eventCodeDesc }}</td>
+          <td>{{ items.pointDesc }}</td>
+          <td>{{ items.signalCode }}</td>
+          <td>{{ items.xmit }}</td>
+          <td>{{ items.siteDate.toLocaleString() }}</td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
+    <!--
      <ul id="signal-data">
         <li v-for="items of signalData.items" :key="items">
-            Alarm Number: {{ items.alarmNum }},  
+            <v-divider>Alarm Number: {{ items.alarmNum }},</v-divider>  
             Event Code Description: {{ items.eventCodeDesc }}
             Point Description: {{ items.pointDesc }},
             Signal Code: {{ items.signalCode }}
@@ -13,6 +58,7 @@
             Site Date: {{items.siteDate.toLocaleString() }}
         </li>
     </ul>
+    -->
   </v-container>
 </template>
 
