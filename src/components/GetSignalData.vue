@@ -3,7 +3,7 @@
     <v-row class="get-signal-data">
         <v-btn @click="getSignalData1" depressed
   elevation="2"
-  large
+  color="secondary"
   outlined
   raised
   rounded>Get Alarm Signal Data</v-btn>

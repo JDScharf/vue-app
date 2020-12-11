@@ -18,7 +18,7 @@
         </v-col>
         <v-btn @click="authenticate" depressed
   elevation="2"
-  large
+  color="secondary"
   outlined
   raised
   rounded>Authenticate</v-btn>

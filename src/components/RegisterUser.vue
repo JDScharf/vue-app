@@ -32,7 +32,7 @@
         </v-col>
         <v-btn @click ="register" depressed
   elevation="2"
-  large
+  color="secondary"
   outlined
   raised
   rounded>Register</v-btn>
