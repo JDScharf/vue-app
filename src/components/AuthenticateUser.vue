@@ -21,7 +21,7 @@
   color="secondary"
   outlined
   raised
-  rounded>Authenticate</v-btn>
+  rounded>Login</v-btn>
     </v-row>
   </v-container>
 </template>
