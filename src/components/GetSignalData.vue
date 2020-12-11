@@ -47,18 +47,6 @@
       </tbody>
     </template>
   </v-simple-table>
-    <!--
-     <ul id="signal-data">
-        <li v-for="items of signalData.items" :key="items">
-            <v-divider>Alarm Number: {{ items.alarmNum }},</v-divider>  
-            Event Code Description: {{ items.eventCodeDesc }}
-            Point Description: {{ items.pointDesc }},
-            Signal Code: {{ items.signalCode }}
-            Xmit: {{ items.xmit }}
-            Site Date: {{items.siteDate.toLocaleString() }}
-        </li>
-    </ul>
-    -->
   </v-container>
 </template>
 
@@ -102,7 +90,6 @@
         .catch(function (error) {
           console.warn('Something went wrong', error);
         });
-        console.log(getSignalData);
         console.log(bearerToken);
   }
 }
