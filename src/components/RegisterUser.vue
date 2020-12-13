@@ -31,8 +31,8 @@
         ></v-text-field>
         </v-col>
         <v-btn @click ="register" depressed
-  elevation="2"
-  color="secondary"
+  elevation="10"
+  color="primary"
   outlined
   raised
   rounded>Register</v-btn>
@@ -107,3 +107,7 @@
 }
 }
 </script>
+
+<style> 
+
+</style>

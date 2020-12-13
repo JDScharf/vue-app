@@ -17,7 +17,7 @@
         ></v-text-field>
         </v-col>
         <v-btn @click="authenticate" depressed
-  elevation="2"
+  elevation="10"
   color="secondary"
   outlined
   raised
