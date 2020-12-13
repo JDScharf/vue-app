@@ -3,14 +3,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img
-          :src="require('../assets/Salt-City-Security.png')"
-          class="my-3"
-          contain
-          height="300"
-        />
-        <H1> This is sample text </H1><br>
-        <H3> This is a sub-paragraph </H3>
+        <H1> Protecting your home since 2020 </H1><br>
       </v-col>
     </v-row>
   </div>
