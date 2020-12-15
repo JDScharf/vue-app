@@ -39,7 +39,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #913d0d;
+  color: #000000;
 }
 
 #nav {

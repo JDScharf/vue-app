@@ -95,7 +95,8 @@
     fetch('https://grasperapi.azurewebsites.net/api/v1/Users/register', sendToSwagger)
       .then(function(response) {
         if(response.ok) {
-          return response.json();
+          return response.json()
+          this.$router.push('AuthenticateUser');
         }
         return Promise.reject(response);
         }).then(function (data) {
